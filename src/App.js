@@ -12,6 +12,7 @@ import Clarifai from 'clarifai';
 
 const app = new Clarifai.App({
   apiKey: '8b74b23b5e27427faae047afd9c1aa49'
+  // apiKey: process.env.API_CLARIFAI
  });
 
 const initialState = {
@@ -92,7 +93,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'signout') {
-      this.setState({isSignedIn: false})
+      this.setState(initialState)
     } else if (route === 'home') {
       this.setState({isSignedIn: true})
     }
