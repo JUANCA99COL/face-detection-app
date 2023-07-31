@@ -47,7 +47,7 @@ class Register extends React.Component {
             <main className="pa4 black-80">
                 <div className="measure">
                     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                    <legend className="f1 fw6 ph0 mh0">REGISTER</legend>
+                    <legend className="f1 white fw6 ph0 mh0">REGISTER</legend>
                     <div className="mt3">
                         <label className="db white fw6 lh-copy f6" htmlFor="name">Name</label>
                         <input 
@@ -76,12 +76,18 @@ class Register extends React.Component {
                             onChange={this.onPasswordChange}/>
                     </div>
                     </fieldset>
-                    <div className="">
-                        <input 
-                            onClick={this.onSubmitSignIn}
-                            className="b ph3 pv2 pointer white input-reset ba b--black bg-black grow pointer f6 dib" 
-                            type="submit" 
-                            value="Register"/>
+                        <div className="">
+                            <input 
+                                onClick={this.onSubmitSignIn}
+                                className="b ph3 pv2 pointer white input-reset ba b--black bg-black grow pointer f6 dib" 
+                                type="submit" 
+                                value="Register"/>
+                        </div>
+                        <div className="lh-copy mt3">
+                         <p 
+                            onClick={() => this.props.onRouteChange('signin')}
+                            className="pointer f6 link dim white db">Sign in
+                         </p>
                         </div>
                     </div>
                 </main>
