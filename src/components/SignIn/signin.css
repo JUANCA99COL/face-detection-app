@@ -1,0 +1,10 @@
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 414px) {
+    .w-100 {
+        width: 80% !important;
+    }
+
+    .f1 {
+        font-size: 2rem !important;
+    }
+}
