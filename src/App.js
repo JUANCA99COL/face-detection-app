@@ -11,9 +11,9 @@ import './App.css';
 import Clarifai from 'clarifai';
 
 const app = new Clarifai.App({
-  apiKey: '8b74b23b5e27427faae047afd9c1aa49'
-  // apiKey: process.env.API_CLARIFAI
+  apiKey: `${process.env.API_CLARIFAI}`
  });
+
 
 const initialState = {
   input: '',
@@ -29,7 +29,6 @@ const initialState = {
         joined: ''
   }
 }
-
 
 class App extends Component {
   constructor() {
@@ -70,7 +69,9 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    app.models.predict('face-detection', this.state.input)
+    app.models.predict({ 
+      id: "face-detection",
+    }, this.state.input )
       .then(response => {
         console.log('hi', response)
         if (response) {
