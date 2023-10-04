@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-parallax-tilt": "^1.7.146",
     "react-scripts": "^5.0.1",
+    "react-spinners": "^0.13.8",
     "semver": "^7.5.4",
     "serve": "^6.4.10",
     "tachyons": "^4.12.0",

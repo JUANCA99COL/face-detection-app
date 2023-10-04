@@ -1,7 +1,7 @@
 import React from "react";
 
-const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
-    return  (
+const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {     
+    return  ( 
         <div>
             <p className="f3 b">
                 {'this magic Brain will detect your pictures'}
